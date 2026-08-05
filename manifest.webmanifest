@@ -1,7 +1,7 @@
 {
-  "name": "Hennessy Research \u2014 Financial Roadmap",
+  "name": "Beacon \u2014 Financial Institution Field Guide",
   "short_name": "Beacon",
-  "description": "Financial-institution research, visit preparation, and opportunity intelligence.",
+  "description": "A personal field library for researching financial institutions, remembering relationships, and preparing routes.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",

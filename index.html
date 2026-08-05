@@ -28,19 +28,19 @@
   <div class="product-name" id="heroBrandName">Beacon</div>
   <h1 id="heroBrandSubtitle">Financial Institution Field Guide</h1>
   <p class="motto">Research <span>•</span> Relationships <span>•</span> Routes</p>
-  <p class="hero-description">Organize institution research, prepare for visits, and keep every relationship moving forward.</p>
+  <p class="hero-description">Build a personal library of financial institutions, relationships, and places worth revisiting.</p>
 </div>
 <div class="hero-actions">
-<div class="search-wrap"><input aria-label="Search by financial or city" class="control" id="search" placeholder="Search by financial or city…"/></div>
+<div class="search-wrap"><input aria-label="Search by financial or city" class="control" id="search" placeholder="Search your library…"/></div>
 <button aria-controls="filterBody" aria-expanded="false" class="btn secondary" id="filterToggle" type="button">Filters</button>
-<button class="btn teal" id="openAdd">＋ Add Financial</button>
+<button class="btn teal" id="openAdd">＋ Add to Library</button>
 </div>
 <input accept="application/json,.json" hidden="" id="importFile" type="file"/>
 <div class="preview-notice"><strong>PWA foundation:</strong> Install from your browser menu after the app is hosted. Data remains on this device unless exported as JSON.</div><div aria-live="polite" class="network-status" id="networkStatus" role="status">Checking connection…</div>
 </header>
 <div class="dashboard-grid">
 <aside aria-label="Dashboard filters" class="panel toolbar" id="filterPanel">
-<button aria-controls="filterBody" aria-expanded="false" class="filter-toggle" id="filterTogglePanel" type="button"><span>Filter Financials</span><span>⌄</span></button>
+<button aria-controls="filterBody" aria-expanded="false" class="filter-toggle" id="filterTogglePanel" type="button"><span>Filter Library</span><span>⌄</span></button>
 <div class="filter-body" id="filterBody">
 <div class="toolbar-top"><h2>Filters</h2><button class="btn small secondary" id="resetFilters">Reset</button></div>
 <div class="filter-grid">
@@ -58,30 +58,30 @@
 </aside>
 <main>
 <div class="content-head">
-<div><h2>Financials</h2><p id="resultCount">0 financials shown</p></div>
+<div><h2>Library</h2><p id="resultCount">0 institutions in view</p></div>
 </div>
 <section aria-live="polite" class="card-list" id="cardList">
 <article class="fin-card static-preview-card" data-id="gulf-coast-community-fcu-gulfport-ms">
 <div class="card-visual poster-gcc"><div class="poster-monogram">GCCFCU</div><div class="visual-overlay"></div><div class="card-badges"><span class="badge">Gulf Coast</span><span class="badge score">4 — Strong</span></div></div>
-<div class="card-main"><div class="poster-label">Upcoming Financial</div><h3>Gulf Coast Community Federal Credit Union</h3><div class="location">Gulfport, Mississippi</div><div class="quick-grid"><div class="quick-item"><span>Executive</span><strong>Not Publicly Verified</strong></div><div class="quick-item"><span>Total Assets</span><strong>$163.7 million</strong></div><div class="quick-item"><span>Institution Type</span><strong>Federal Credit Union</strong></div><div class="quick-item"><span>Visit Status</span><strong>Upcoming — First Visit</strong></div></div><div class="next-action"><strong>Next action:</strong> Confirm who owns loan intake and borrower document collection.</div><div class="card-actions"><button class="btn small secondary expandBtn" type="button">Expand Profile</button><button class="btn small secondary editBtn" type="button">Edit</button></div></div>
+<div class="card-main"><div class="poster-label">Library Entry</div><h3>Gulf Coast Community Federal Credit Union</h3><div class="location">Gulfport, Mississippi</div><div class="quick-grid"><div class="quick-item"><span>Executive</span><strong>Not Publicly Verified</strong></div><div class="quick-item"><span>Total Assets</span><strong>$163.7 million</strong></div><div class="quick-item"><span>Institution Type</span><strong>Federal Credit Union</strong></div><div class="quick-item"><span>Visit Status</span><strong>Upcoming — First Visit</strong></div></div><div class="next-action"><strong>Next action:</strong> Confirm who owns loan intake and borrower document collection.</div><div class="card-actions"><button class="btn small secondary expandBtn" type="button">View Profile</button><button class="btn small secondary editBtn" type="button">Edit</button></div></div>
 </article>
 <article class="fin-card static-preview-card" data-id="keesler-fcu-biloxi-ms">
 <div class="card-visual poster-kfcu"><div class="poster-monogram">KFCU</div><div class="visual-overlay"></div><div class="card-badges"><span class="badge">Gulf Coast</span><span class="badge score">4 — Strong</span></div></div>
-<div class="card-main"><div class="poster-label">Upcoming Financial</div><h3>Keesler Federal Credit Union</h3><div class="location">Biloxi, Mississippi</div><div class="quick-grid"><div class="quick-item"><span>Executive</span><strong>Andrew Swoger, President &amp; CEO</strong></div><div class="quick-item"><span>Total Assets</span><strong>$4.2 billion</strong></div><div class="quick-item"><span>Institution Type</span><strong>Federal Credit Union</strong></div><div class="quick-item"><span>Visit Status</span><strong>Upcoming — First Visit</strong></div></div><div class="next-action"><strong>Next action:</strong> Explore commercial intake, document collection, and workflow ownership.</div><div class="card-actions"><button class="btn small secondary expandBtn" type="button">Expand Profile</button><button class="btn small secondary editBtn" type="button">Edit</button></div></div>
+<div class="card-main"><div class="poster-label">Library Entry</div><h3>Keesler Federal Credit Union</h3><div class="location">Biloxi, Mississippi</div><div class="quick-grid"><div class="quick-item"><span>Executive</span><strong>Andrew Swoger, President &amp; CEO</strong></div><div class="quick-item"><span>Total Assets</span><strong>$4.2 billion</strong></div><div class="quick-item"><span>Institution Type</span><strong>Federal Credit Union</strong></div><div class="quick-item"><span>Visit Status</span><strong>Upcoming — First Visit</strong></div></div><div class="next-action"><strong>Next action:</strong> Explore commercial intake, document collection, and workflow ownership.</div><div class="card-actions"><button class="btn small secondary expandBtn" type="button">View Profile</button><button class="btn small secondary editBtn" type="button">Edit</button></div></div>
 </article>
 <article class="fin-card static-preview-card" data-id="merchants-marine-bank-pascagoula-ms">
 <div class="card-visual poster-mmb"><div class="poster-monogram">M&amp;M</div><div class="visual-overlay"></div><div class="card-badges"><span class="badge">Gulf Coast</span><span class="badge score">5 — High Priority</span></div></div>
-<div class="card-main"><div class="poster-label">Upcoming Financial</div><h3>Merchants &amp; Marine Bank</h3><div class="location">Pascagoula, Mississippi</div><div class="quick-grid"><div class="quick-item"><span>Executive</span><strong>Paige Oliver, President &amp; CEO</strong></div><div class="quick-item"><span>Total Assets</span><strong>$960.8 million</strong></div><div class="quick-item"><span>Institution Type</span><strong>Community Bank</strong></div><div class="quick-item"><span>Visit Status</span><strong>Upcoming — First Visit</strong></div></div><div class="next-action"><strong>Next action:</strong> Identify the owner of commercial intake across the bank and specialty brands.</div><div class="card-actions"><button class="btn small secondary expandBtn" type="button">Expand Profile</button><button class="btn small secondary editBtn" type="button">Edit</button></div></div>
+<div class="card-main"><div class="poster-label">Library Entry</div><h3>Merchants &amp; Marine Bank</h3><div class="location">Pascagoula, Mississippi</div><div class="quick-grid"><div class="quick-item"><span>Executive</span><strong>Paige Oliver, President &amp; CEO</strong></div><div class="quick-item"><span>Total Assets</span><strong>$960.8 million</strong></div><div class="quick-item"><span>Institution Type</span><strong>Community Bank</strong></div><div class="quick-item"><span>Visit Status</span><strong>Upcoming — First Visit</strong></div></div><div class="next-action"><strong>Next action:</strong> Identify the owner of commercial intake across the bank and specialty brands.</div><div class="card-actions"><button class="btn small secondary expandBtn" type="button">View Profile</button><button class="btn small secondary editBtn" type="button">Edit</button></div></div>
 </article>
 </section>
 </main>
 </div>
-<div class="footer">Data entered into this dashboard is saved in this browser and on this device. Export a JSON backup to move your data or protect it from browser storage loss.</div>
+<div class="footer">Your library is saved in this browser and on this device. Export a JSON backup to move your data or protect it from browser storage loss.</div>
 <div class="footer-brand"><strong id="brandName">Beacon</strong><span id="brandSubtitle">Financial Institution Field Guide</span><small>Research • Relationships • Routes</small><em>Powered by Hennessy Research</em></div>
 </div>
 <div aria-labelledby="addTitle" aria-modal="true" class="modal" id="addModal" role="dialog">
 <div class="modal-card">
-<div class="modal-head"><h2 id="addTitle">Add Financial</h2><button aria-label="Close" class="icon-btn" data-close="addModal">×</button></div>
+<div class="modal-head"><h2 id="addTitle">Add to Library</h2><button aria-label="Close" class="icon-btn" data-close="addModal">×</button></div>
 <form id="addForm">
 <input id="editId" type="hidden"/>
 <div class="form-grid">
@@ -94,7 +94,7 @@
 <div class="field"><label for="finPriority">Priority</label><select class="control" id="finPriority"><option>High</option><option selected="">Medium</option><option>Low</option></select></div>
 <div class="field wide"><label for="initialNote">Optional initial note</label><textarea class="control" id="initialNote"></textarea></div>
 </div>
-<div class="form-actions"><button class="btn teal" type="submit">Save Financial</button><button class="btn secondary" data-close="addModal" type="button">Cancel</button></div>
+<div class="form-actions"><button class="btn teal" type="submit">Save to Library</button><button class="btn secondary" data-close="addModal" type="button">Cancel</button></div>
 </form>
 </div>
 </div>
@@ -114,6 +114,18 @@
 </div>
 <div class="form-actions"><button class="btn teal" id="saveSettings" type="button">Save Settings</button><button class="btn secondary" data-close="settingsModal" type="button">Close</button></div>
 </div>
+</div>
+<div aria-labelledby="profileTitle" aria-modal="true" class="profile-overlay" id="profileModal" role="dialog" hidden>
+  <div class="profile-shell">
+    <header class="profile-nav">
+      <button class="profile-back" id="closeProfile" type="button" aria-label="Return to library">← <span>Library</span></button>
+      <div class="profile-nav-actions">
+        <button class="btn small secondary" id="profileEdit" type="button">Edit</button>
+        <button class="icon-btn" id="profileMore" type="button" aria-label="Profile actions">•••</button>
+      </div>
+    </header>
+    <div class="profile-content" id="profileContent"></div>
+  </div>
 </div>
 <div class="toast" id="toast"></div>
 
