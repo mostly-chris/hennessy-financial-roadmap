@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html data-theme="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
+<meta content="dark light" name="color-scheme"/>
+<title>Hennessy Research — Financial Roadmap</title>
+
+<link href="manifest.webmanifest" rel="manifest"/><link href="styles.css" rel="stylesheet"/><link href="icons/icon-192.png" rel="apple-touch-icon"/><meta content="#07131f" name="theme-color"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/><meta content="Financial Roadmap" name="apple-mobile-web-app-title"/></head>
+<body>
+<div class="app-shell">
+<header class="hero">
+<div class="menu-wrap">
+<button aria-controls="utilityMenu" aria-expanded="false" aria-label="Open dashboard menu" class="menu-button" id="utilityMenuButton" type="button"><span aria-hidden="true" class="menu-lines"><span></span><span></span><span></span></span></button>
+<div class="utility-menu" id="utilityMenu" role="menu"><button hidden="" id="installApp" role="menuitem" type="button">⇩ Install App</button>
+<button id="openSettings" role="menuitem" type="button">⚙ <span>Settings &amp; Branding</span></button>
+<button id="printUpcoming" role="menuitem" type="button">⎙ <span>Print Current View</span></button>
+<div class="menu-divider"></div>
+<button id="exportJson" role="menuitem" type="button">⇩ <span>Export JSON Backup</span></button>
+<button id="importJson" role="menuitem" type="button">⇧ <span>Import JSON Backup</span></button>
+<button id="downloadHtml" role="menuitem" type="button">⇩ <span>Download Offline Snapshot</span></button>
+<div class="menu-note">Backups and display controls are kept here so the financial dashboard stays focused.</div>
+</div>
+</div>
+<h1>Financial Roadmap</h1>
+<p>Research, prioritize, and manage financial-institution opportunities in one organized workspace.</p>
+<div class="hero-actions">
+<div class="search-wrap"><input aria-label="Search by financial or city" class="control" id="search" placeholder="Search by financial or city…"/></div>
+<button aria-controls="filterBody" aria-expanded="false" class="btn secondary" id="filterToggle" type="button">Filters</button>
+<button class="btn teal" id="openAdd">＋ Add Financial</button>
+</div>
+<input accept="application/json,.json" hidden="" id="importFile" type="file"/>
+<div class="preview-notice"><strong>PWA foundation:</strong> Install from your browser menu after the app is hosted. Data remains on this device unless exported as JSON.</div><div aria-live="polite" class="network-status" id="networkStatus" role="status">Checking connection…</div>
+</header>
+<div class="dashboard-grid">
+<aside aria-label="Dashboard filters" class="panel toolbar" id="filterPanel">
+<button aria-controls="filterBody" aria-expanded="false" class="filter-toggle" id="filterTogglePanel" type="button"><span>Filter Financials</span><span>⌄</span></button>
+<div class="filter-body" id="filterBody">
+<div class="toolbar-top"><h2>Filters</h2><button class="btn small secondary" id="resetFilters">Reset</button></div>
+<div class="filter-grid">
+<div class="field"><label for="territoryFilter">Territory</label><select class="control" id="territoryFilter"></select></div>
+<div class="field"><label for="stateFilter">State</label><select class="control" id="stateFilter"><option value="">All states</option></select></div>
+<div class="field"><label for="statusFilter">Visit status</label><select class="control" id="statusFilter"></select></div>
+<div class="field"><label for="priorityFilter">Priority</label><select class="control" id="priorityFilter"><option value="">All priorities</option><option>High</option><option>Medium</option><option>Low</option></select></div>
+<div class="field"><label for="scoreFilter">Opportunity score</label><select class="control" id="scoreFilter"><option value="">All scores</option><option value="5">5 — High Priority</option><option value="4">4 — Strong</option><option value="3">3 — Moderate</option><option value="2">2 — Limited</option><option value="1">1 — Low</option></select></div>
+<div class="field"><label for="typeFilter">Institution type</label><select class="control" id="typeFilter"><option value="">All types</option><option>Bank</option><option>Credit Union</option><option>Financial Institution</option><option>Other</option></select></div>
+<div class="field"><label for="assetFilter">Asset size</label><select class="control" id="assetFilter"><option value="">All asset sizes</option><option value="lt250">Under $250M</option><option value="250-1000">$250M–$1B</option><option value="1000-5000">$1B–$5B</option><option value="gt5000">Over $5B</option><option value="unknown">Unknown</option></select></div>
+<div class="field"><label for="loanFilter">Loan offering</label><input class="control" id="loanFilter" placeholder="Commercial, agriculture…"/></div>
+<label class="checkbox-row"><input checked="" id="upcomingOnly" type="checkbox"/> Upcoming only</label>
+</div>
+</div>
+</aside>
+<main>
+<div class="content-head">
+<div><h2>Financials</h2><p id="resultCount">0 financials shown</p></div>
+</div>
+<section aria-live="polite" class="card-list" id="cardList">
+<article class="fin-card static-preview-card" data-id="gulf-coast-community-fcu-gulfport-ms">
+<div class="card-visual poster-gcc"><div class="poster-monogram">GCCFCU</div><div class="visual-overlay"></div><div class="card-badges"><span class="badge">Gulf Coast</span><span class="badge score">4 — Strong</span></div></div>
+<div class="card-main"><div class="poster-label">Upcoming Financial</div><h3>Gulf Coast Community Federal Credit Union</h3><div class="location">Gulfport, Mississippi</div><div class="quick-grid"><div class="quick-item"><span>Executive</span><strong>Not Publicly Verified</strong></div><div class="quick-item"><span>Total Assets</span><strong>$163.7 million</strong></div><div class="quick-item"><span>Institution Type</span><strong>Federal Credit Union</strong></div><div class="quick-item"><span>Visit Status</span><strong>Upcoming — First Visit</strong></div></div><div class="next-action"><strong>Next action:</strong> Confirm who owns loan intake and borrower document collection.</div><div class="card-actions"><button class="btn small secondary expandBtn" type="button">Expand Profile</button><button class="btn small secondary editBtn" type="button">Edit</button></div></div>
+</article>
+<article class="fin-card static-preview-card" data-id="keesler-fcu-biloxi-ms">
+<div class="card-visual poster-kfcu"><div class="poster-monogram">KFCU</div><div class="visual-overlay"></div><div class="card-badges"><span class="badge">Gulf Coast</span><span class="badge score">4 — Strong</span></div></div>
+<div class="card-main"><div class="poster-label">Upcoming Financial</div><h3>Keesler Federal Credit Union</h3><div class="location">Biloxi, Mississippi</div><div class="quick-grid"><div class="quick-item"><span>Executive</span><strong>Andrew Swoger, President &amp; CEO</strong></div><div class="quick-item"><span>Total Assets</span><strong>$4.2 billion</strong></div><div class="quick-item"><span>Institution Type</span><strong>Federal Credit Union</strong></div><div class="quick-item"><span>Visit Status</span><strong>Upcoming — First Visit</strong></div></div><div class="next-action"><strong>Next action:</strong> Explore commercial intake, document collection, and workflow ownership.</div><div class="card-actions"><button class="btn small secondary expandBtn" type="button">Expand Profile</button><button class="btn small secondary editBtn" type="button">Edit</button></div></div>
+</article>
+<article class="fin-card static-preview-card" data-id="merchants-marine-bank-pascagoula-ms">
+<div class="card-visual poster-mmb"><div class="poster-monogram">M&amp;M</div><div class="visual-overlay"></div><div class="card-badges"><span class="badge">Gulf Coast</span><span class="badge score">5 — High Priority</span></div></div>
+<div class="card-main"><div class="poster-label">Upcoming Financial</div><h3>Merchants &amp; Marine Bank</h3><div class="location">Pascagoula, Mississippi</div><div class="quick-grid"><div class="quick-item"><span>Executive</span><strong>Paige Oliver, President &amp; CEO</strong></div><div class="quick-item"><span>Total Assets</span><strong>$960.8 million</strong></div><div class="quick-item"><span>Institution Type</span><strong>Community Bank</strong></div><div class="quick-item"><span>Visit Status</span><strong>Upcoming — First Visit</strong></div></div><div class="next-action"><strong>Next action:</strong> Identify the owner of commercial intake across the bank and specialty brands.</div><div class="card-actions"><button class="btn small secondary expandBtn" type="button">Expand Profile</button><button class="btn small secondary editBtn" type="button">Edit</button></div></div>
+</article>
+</section>
+</main>
+</div>
+<div class="footer">Data entered into this dashboard is saved in this browser and on this device. Export a JSON backup to move your data or protect it from browser storage loss.</div>
+<div class="footer-brand"><strong id="brandName">Hennessy Research</strong><span id="brandSubtitle">Financial Roadmap &amp; Opportunity Intelligence</span></div>
+</div>
+<div aria-labelledby="addTitle" aria-modal="true" class="modal" id="addModal" role="dialog">
+<div class="modal-card">
+<div class="modal-head"><h2 id="addTitle">Add Financial</h2><button aria-label="Close" class="icon-btn" data-close="addModal">×</button></div>
+<form id="addForm">
+<input id="editId" type="hidden"/>
+<div class="form-grid">
+<div class="field"><label for="finName">Financial institution name *</label><input class="control" id="finName" required=""/></div>
+<div class="field"><label for="finCity">Headquarters city *</label><input class="control" id="finCity" required=""/></div>
+<div class="field"><label for="finState">State *</label><input class="control" id="finState" maxlength="30" required=""/></div>
+<div class="field"><label for="finTerritory">Territory</label><select class="control" id="finTerritory"></select></div>
+<div class="field"><label for="plannedDate">Planned visit date</label><input class="control" id="plannedDate" type="date"/></div>
+<div class="field"><label for="finStatus">Visit status</label><select class="control" id="finStatus"></select></div>
+<div class="field"><label for="finPriority">Priority</label><select class="control" id="finPriority"><option>High</option><option selected="">Medium</option><option>Low</option></select></div>
+<div class="field wide"><label for="initialNote">Optional initial note</label><textarea class="control" id="initialNote"></textarea></div>
+</div>
+<div class="form-actions"><button class="btn teal" type="submit">Save Financial</button><button class="btn secondary" data-close="addModal" type="button">Cancel</button></div>
+</form>
+</div>
+</div>
+<div aria-labelledby="settingsTitle" aria-modal="true" class="modal" id="settingsModal" role="dialog">
+<div class="modal-card">
+<div class="modal-head"><h2 id="settingsTitle">Settings &amp; Branding</h2><button aria-label="Close" class="icon-btn" data-close="settingsModal">×</button></div>
+<div class="form-grid">
+<div class="field"><label for="setName">Dashboard name</label><input class="control" id="setName"/></div>
+<div class="field"><label for="setSubtitle">Subtitle</label><input class="control" id="setSubtitle"/></div>
+<div class="field"><label for="setPrimary">Primary blue</label><input class="control" id="setPrimary" type="color"/></div>
+<div class="field"><label for="setTeal">Teal accent</label><input class="control" id="setTeal" type="color"/></div>
+<div class="field"><label for="setBg">Background</label><input class="control" id="setBg" type="color"/></div>
+<div class="field"><label for="setTheme">Display preference</label><select class="control" id="setTheme"><option value="dark">Dark</option><option value="light">Light</option></select></div>
+<div class="wide"><div class="settings-note"><strong>Portable data note:</strong> Local storage does not travel automatically with the HTML file. Export JSON before switching browsers or devices, then import it into the copied dashboard.</div></div>
+<div class="wide section"><h4>Territories</h4><div class="management-list" id="territoryManager"></div><button class="btn small secondary" id="addTerritory" type="button">＋ Add Territory</button></div>
+<div class="wide section"><h4>Visit Status Stages</h4><div class="management-list" id="statusManager"></div><button class="btn small secondary" id="addStatus" type="button">＋ Add Status</button></div>
+</div>
+<div class="form-actions"><button class="btn teal" id="saveSettings" type="button">Save Settings</button><button class="btn secondary" data-close="settingsModal" type="button">Close</button></div>
+</div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script defer="" src="app.js"></script></body>
+</html>
