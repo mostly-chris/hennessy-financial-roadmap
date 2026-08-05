@@ -5,9 +5,9 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1, viewport-fit=cover" name="viewport"/>
 <meta content="dark light" name="color-scheme"/>
-<title>Hennessy Research — Financial Roadmap</title>
+<title>Beacon — Financial Institution Field Guide</title>
 
-<link href="manifest.webmanifest" rel="manifest"/><link href="styles.css" rel="stylesheet"/><link href="icons/icon-192.png" rel="apple-touch-icon"/><meta content="#07131f" name="theme-color"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/><meta content="Financial Roadmap" name="apple-mobile-web-app-title"/></head>
+<link href="manifest.webmanifest" rel="manifest"/><link href="styles.css" rel="stylesheet"/><link href="icons/icon-192.png" rel="apple-touch-icon"/><meta content="#07131f" name="theme-color"/><meta content="yes" name="apple-mobile-web-app-capable"/><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"/><meta content="Beacon" name="apple-mobile-web-app-title"/></head>
 <body>
 <div class="app-shell">
 <header class="hero">
@@ -23,8 +23,13 @@
 <div class="menu-note">Backups and display controls are kept here so the financial dashboard stays focused.</div>
 </div>
 </div>
-<h1>Financial Roadmap</h1>
-<p>Research, prioritize, and manage financial-institution opportunities in one organized workspace.</p>
+<div class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+<div class="hero-copy">
+  <div class="product-name" id="heroBrandName">Beacon</div>
+  <h1 id="heroBrandSubtitle">Financial Institution Field Guide</h1>
+  <p class="motto">Research <span>•</span> Relationships <span>•</span> Routes</p>
+  <p class="hero-description">Organize institution research, prepare for visits, and keep every relationship moving forward.</p>
+</div>
 <div class="hero-actions">
 <div class="search-wrap"><input aria-label="Search by financial or city" class="control" id="search" placeholder="Search by financial or city…"/></div>
 <button aria-controls="filterBody" aria-expanded="false" class="btn secondary" id="filterToggle" type="button">Filters</button>
@@ -72,7 +77,7 @@
 </main>
 </div>
 <div class="footer">Data entered into this dashboard is saved in this browser and on this device. Export a JSON backup to move your data or protect it from browser storage loss.</div>
-<div class="footer-brand"><strong id="brandName">Hennessy Research</strong><span id="brandSubtitle">Financial Roadmap &amp; Opportunity Intelligence</span></div>
+<div class="footer-brand"><strong id="brandName">Beacon</strong><span id="brandSubtitle">Financial Institution Field Guide</span><small>Research • Relationships • Routes</small><em>Powered by Hennessy Research</em></div>
 </div>
 <div aria-labelledby="addTitle" aria-modal="true" class="modal" id="addModal" role="dialog">
 <div class="modal-card">
@@ -97,8 +102,8 @@
 <div class="modal-card">
 <div class="modal-head"><h2 id="settingsTitle">Settings &amp; Branding</h2><button aria-label="Close" class="icon-btn" data-close="settingsModal">×</button></div>
 <div class="form-grid">
-<div class="field"><label for="setName">Dashboard name</label><input class="control" id="setName"/></div>
-<div class="field"><label for="setSubtitle">Subtitle</label><input class="control" id="setSubtitle"/></div>
+<div class="field"><label for="setName">Product name</label><input class="control" id="setName"/></div>
+<div class="field"><label for="setSubtitle">Product descriptor</label><input class="control" id="setSubtitle"/></div>
 <div class="field"><label for="setPrimary">Primary blue</label><input class="control" id="setPrimary" type="color"/></div>
 <div class="field"><label for="setTeal">Teal accent</label><input class="control" id="setTeal" type="color"/></div>
 <div class="field"><label for="setBg">Background</label><input class="control" id="setBg" type="color"/></div>

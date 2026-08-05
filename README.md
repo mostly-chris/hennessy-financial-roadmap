@@ -1,4 +1,4 @@
-# Hennessy Research — Financial Roadmap PWA Foundation
+# Beacon — Financial Institution Field Guide
 
 This package is the Version 2 foundation built from the latest approved HTML dashboard.
 
